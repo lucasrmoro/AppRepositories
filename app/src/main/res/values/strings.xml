@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppRepositories</string>
+    <string name="search">Pesquisar</string>
 </resources>
