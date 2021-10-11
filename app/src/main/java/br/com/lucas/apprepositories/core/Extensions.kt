@@ -6,6 +6,7 @@ import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
+import br.com.lucas.apprepositories.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
 
@@ -29,7 +30,7 @@ fun Context.createDialog(block: MaterialAlertDialogBuilder.() -> Unit = {}): Ale
 
 fun Context.createProgressDialog(): AlertDialog {
     return createDialog {
-        val padding = 16
+        val padding = R.dimen.layout_padding
         val progressBar = ProgressBar(this@createProgressDialog)
         progressBar.setPadding(padding, padding, padding, padding)
         setView(progressBar)
