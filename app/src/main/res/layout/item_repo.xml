@@ -38,7 +38,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="@sample/repositories.json/data/description"
-            android:textStyle="bold"
             android:maxLines="2"
             android:ellipsize="end"
             app:layout_constraintStart_toStartOf="@id/tv_repo_name"
@@ -66,7 +65,7 @@
             android:maxLines="2"
             android:ellipsize="end"
             app:layout_constraintEnd_toEndOf="@id/tv_repo_name"
-            app:layout_constraintTop_toTopOf="@id/chip_star"
+
             app:layout_constraintBottom_toBottomOf="@id/chip_star"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

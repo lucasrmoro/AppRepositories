@@ -1,20 +1,14 @@
 package br.com.lucas.apprepositories.core
 
 import android.app.Activity
-import androidx.appcompat.app.AlertDialog
 import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
+import androidx.appcompat.app.AlertDialog
 import br.com.lucas.apprepositories.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
-
-var TextInputLayout.text: String
-    get() = editText?.text?.toString() ?: ""
-    set(value) {
-        editText?.setText(value)
-    }
 
 fun View.hideSoftKeyboard() {
     val imm = context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -30,7 +24,7 @@ fun Context.createDialog(block: MaterialAlertDialogBuilder.() -> Unit = {}): Ale
 
 fun Context.createProgressDialog(): AlertDialog {
     return createDialog {
-        val padding = R.dimen.layout_padding
+        val padding = this@createProgressDialog.resources.getDimensionPixelOffset(R.dimen.layout_padding)
         val progressBar = ProgressBar(this@createProgressDialog)
         progressBar.setPadding(padding, padding, padding, padding)
         setView(progressBar)
